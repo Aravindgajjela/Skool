@@ -1,5 +1,4 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
@@ -10,24 +9,28 @@ import ParentDashboard from "./components/ParentDashboard"; // Import Parent Das
 import Chat from "./components/Chat"; // Import the Chat component
 import Settings from "./components/Settings"; // Import the Settings component
 import Navbar from "./components/Navbar"; // Import Navbar component
+import ParentComponent from "./components/ParentComponent"; // Import the ParentComponent
+import CodeVisualizer from "./components/CodeVisualizer"; // Import the CodeVisualizer component
 
 class App extends Component {
-    render() {
-        return (
-            <Router>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/quiz" element={<Quiz />} />
-                    <Route path="/progressBar" element={<ProgressBar />} />
-                    <Route path="/homework" element={<Homework />} />
-                    <Route path="/parent-dashboard" element={<ParentDashboard />} />
-                    <Route path="/chat" element={<Chat />} /> {/* Chat Route */}
-                    <Route path="/settings" element={<Settings />} /> {/* Settings Route */}
-                </Routes>
-            </Router>
-        );
-    }
+  render() {
+    return (
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/progressBar" element={<ProgressBar />} />
+          <Route path="/homework" element={<Homework />} />
+          <Route path="/parent-dashboard" element={<ParentDashboard />} />
+          <Route path="/chat" element={<Chat />} /> {/* Chat Route */}
+          <Route path="/settings" element={<Settings />} /> {/* Settings Route */}
+          <Route path="/code-editor" element={<ParentComponent />} /> {/* Use ParentComponent here */}
+          <Route path="/code-visualizer" element={<CodeVisualizer />} /> {/* New Code Visualizer Route */}
+        </Routes>
+      </Router>
+    );
+  }
 }
 
 export default App;

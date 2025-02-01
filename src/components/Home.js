@@ -57,6 +57,25 @@ class Home extends Component {
                                     <i className="fas fa-users"></i> {/* Parent Dashboard icon */}
                                 </div>
                             </Link>
+
+                            {/* Code Editor card with icon */}
+                            <Link to="/code-editor" className="card-link">
+                                <div className="card card-code-editor">
+                                    <h3>Code Editor</h3>
+                                    <p>Write and test your Python code directly!</p>
+                                    <i className="fas fa-code"></i> {/* Code Editor icon */}
+                                </div>
+                            </Link>
+
+                            {/* Code Visualizer card with icon */}
+                            <Link to="/code-visualizer" className="card-link">
+                                <div className="card card-code-visualizer">
+                                    <h3>Code Visualizer</h3>
+                                    <p>Visualize your code execution step by step!</p>
+                                    <i className="fas fa-eye"></i> {/* Code Visualizer icon */}
+                                </div>
+                            </Link>
+
                         </div>
                     </div>
                 </div>

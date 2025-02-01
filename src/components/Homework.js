@@ -8,27 +8,27 @@ class Homework extends Component {
         isCorrect: {},
     };
 
-    // List of homework questions with simplified answers
+    // List of homework questions with simplified answers in Python
     questions = [
         {
             id: 1,
-            question: "Write a JavaScript function to calculate the square of a number:",
-            correctAnswer: "let square = (x) => { return x * x; }"
+            question: "Write a Python function to calculate the square of a number:",
+            correctAnswer: "def square(x):\n    return x * x"
         },
         {
             id: 2,
-            question: "Write a JavaScript function to find the factorial of a number:",
-            correctAnswer: "let factorial = (x) => { let result = 1; for(let i = 1; i <= x; i++) { result *= i; } return result; }"
+            question: "Write a Python function to find the factorial of a number:",
+            correctAnswer: "def factorial(x):\n    result = 1\n    for i in range(1, x+1):\n        result *= i\n    return result"
         },
         {
             id: 3,
-            question: "Write a JavaScript function to check if a number is prime:",
-            correctAnswer: "let isPrime = (n) => { for(let i = 2; i < n; i++) { if(n % i === 0) return false; } return true; }"
+            question: "Write a Python function to check if a number is prime:",
+            correctAnswer: "def is_prime(n):\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return True"
         },
         {
             id: 4,
-            question: "Write a JavaScript function to reverse a string:",
-            correctAnswer: "let reverseString = (s) => { return s.split('').reverse().join(''); }"
+            question: "Write a Python function to reverse a string:",
+            correctAnswer: "def reverse_string(s):\n    return s[::-1]"
         }
     ];
 

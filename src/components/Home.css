@@ -103,3 +103,47 @@
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* New styling for Code Editor card */
+.card-code-editor {
+    background-color: #E1F5FE; /* Light blue background */
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px; /* Slightly larger for visibility */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-code-editor h3 {
+    color: #0288D1; /* Blue color for card title */
+}
+
+.card-code-editor p {
+    color: #555; /* Darker text for the description */
+}
+
+.card-code-editor:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* New styling for Code Visualizer card */
+.card-code-visualizer {
+    background-color: #FFF3E0; /* Light yellow background */
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px; /* Slightly larger for visibility */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-code-visualizer h3 {
+    color: #FF6F00; /* Orange color for card title */
+}
+
+.card-code-visualizer p {
+    color: #555; /* Darker text for the description */
+}
+
+.card-code-visualizer:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
