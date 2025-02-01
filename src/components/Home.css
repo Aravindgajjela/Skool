@@ -1,103 +1,105 @@
 /* Overall background and layout for the home screen */
 .home-container {
-                  font-family: 'Comic Sans MS', cursive, sans-serif;
-                  background-color: #FFEBEE; /* Light pink background */
-                  min-height: 100vh;
-                  text-align: center;
-                  padding: 20px;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-              }
-              
-              /* Main content section */
-              .main-content {
-                  width: 100%;
-                  max-width: 900px;
-              }
-              
-              /* Header area with title and description */
-              .header {
-                  background-color: #FF5722; /* Bright orange background */
-                  padding: 40px;
-                  border-radius: 10px;
-                  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-                  color: white;
-              }
-              
-              .main-title {
-                  font-size: 36px;
-                  margin-bottom: 10px;
-              }
-              
-              .subheading {
-                  font-size: 18px;
-                  font-weight: 300;
-              }
-              
-              /* Feature section container */
-              .feature-container {
-                  margin-top: 40px;
-              }
-              
-              /* Title for the feature section */
-              .feature-title {
-                  font-size: 28px;
-                  color: #FF5722;
-                  font-weight: bold;
-                  margin-bottom: 20px;
-              }
-              
-              /* Flexbox for feature cards */
-              .feature-cards {
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: center;
-                  gap: 20px;
-              }
-              
-              /* Styling for each feature card */
-              .card {
-                  background-color: #fff;
-                  border-radius: 15px;
-                  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-                  padding: 20px;
-                  width: 220px;
-                  text-align: center;
-                  cursor: pointer;
-                  transition: transform 0.3s, box-shadow 0.3s;
-              }
-              
-              .card:hover {
-                  transform: scale(1.05);
-                  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-              }
-              
-              /* Card text */
-              .card h3 {
-                  font-size: 24px;
-                  color: #FF5722;
-              }
-              
-              .card p {
-                  font-size: 16px;
-                  color: #333;
-                  font-weight: 300;
-              }
-              
-              /* Link styles */
-              .card-link {
-                  text-decoration: none;
-                  color: inherit;
-              }
-              
-              /* Style for the CodeHero bot section */
-              .CodeHero {
-                  margin-top: 30px;
-                  padding: 20px;
-                  background-color: #FF5722;
-                  color: white;
-                  border-radius: 10px;
-                  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-              }
-              
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #FFEBEE; /* Light pink background */
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main content section */
+.main-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Header area with title and description */
+.header {
+    background-color: #FF5722; /* Bright orange background */
+    padding: 30px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.main-title {
+    font-size: 28px; /* Decreased the font size for the title */
+    margin-bottom: 8px; /* Reduced space below the title */
+}
+
+.subheading {
+    font-size: 16px; /* Decreased the font size for the subheading */
+    font-weight: 300;
+}
+
+/* Feature section container */
+.feature-container {
+    margin-top: 40px;
+}
+
+/* Title for the feature section */
+.feature-title {
+    font-size: 28px;
+    color: #FF5722;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Flexbox for feature cards */
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Styling for each feature card */
+.card {
+    position: relative;
+    background-color: #ffffff; /* White background */
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px; /* Decreased the card size */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Card text */
+.card h3 {
+    font-size: 20px; /* Reduced font size for card title */
+    color: #FF5722;
+}
+
+.card p {
+    font-size: 14px; /* Reduced font size for card description */
+    color: #333;
+    font-weight: 300;
+}
+
+/* Link styles */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Style for the CodeHero bot section */
+.CodeHero {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #FF5722;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";  // Import Link to enable routing
-import CodeHero from "./CodeHero"; // Superhero AI Tutor Bot
+import CodeHero from "./HelpBot"; // Superhero AI Tutor Bot
 import "./Home.css"; // Importing the external CSS file
 
 class Home extends Component {
@@ -22,32 +22,39 @@ class Home extends Component {
                     <div className="feature-container">
                         <h2>Explore Features</h2>
                         <div className="feature-cards">
-                            {/* Links to the routes */}
+                            {/* Quiz card with icon */}
                             <Link to="/quiz" className="card-link">
                                 <div className="card">
                                     <h3>Quiz</h3>
                                     <p>Take fun quizzes to test your Python skills!</p>
+                                    <i className="fas fa-question-circle"></i> {/* Quiz icon */}
                                 </div>
                             </Link>
 
-                            <Link to="/progressBar" className="card-link">
-                                <div className="card">
-                                    <h3>Progress</h3>
-                                    <p>Track your progress as you learn!</p>
-                                </div>
-                            </Link>
-
+                            {/* Homework card with icon */}
                             <Link to="/homework" className="card-link">
                                 <div className="card">
                                     <h3>Homework</h3>
                                     <p>Complete assignments and challenge yourself.</p>
+                                    <i className="fas fa-book"></i> {/* Homework icon */}
                                 </div>
                             </Link>
 
+                            {/* Progress card with icon */}
+                            <Link to="/progressBar" className="card-link">
+                                <div className="card">
+                                    <h3>Progress</h3>
+                                    <p>Track your progress as you learn!</p>
+                                    <i className="fas fa-chart-line"></i> {/* Progress icon */}
+                                </div>
+                            </Link>
+
+                            {/* Parent Dashboard card with icon */}
                             <Link to="/parent-dashboard" className="card-link">
                                 <div className="card">
                                     <h3>Parent Dashboard</h3>
                                     <p>Let your parents track your learning journey!</p>
+                                    <i className="fas fa-users"></i> {/* Parent Dashboard icon */}
                                 </div>
                             </Link>
                         </div>

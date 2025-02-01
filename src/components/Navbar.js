@@ -1,83 +1,117 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom"; // Import Link to enable routing
+import { FaPython } from "react-icons/fa"; // Python icon
 
 class Navbar extends Component {
-    render() {
-        return (
-            <nav style={styles.navbar}>
-                <ul style={styles.navList}>
-                    <li>
-                        <Link to="/" style={styles.navItem}>
-                            <i className="fas fa-home" style={styles.icon}></i> {/* Home icon */}
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/chat" style={styles.navItem}>
-                            <i className="fas fa-comments" style={styles.icon}></i> {/* Chat icon */}
-                            Chat
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/settings" style={styles.navItem}>
-                            <i className="fas fa-cogs" style={styles.icon}></i> {/* Settings icon */}
-                            Settings
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-        );
-    }
+  state = {
+    isLoggedIn: false, // Track login status
+  };
+
+  toggleLogin = () => {
+    this.setState((prevState) => ({ isLoggedIn: !prevState.isLoggedIn }));
+  };
+
+  render() {
+    return (
+      <nav style={styles.navbar}>
+        <div style={styles.leftSection}>
+          <Link to="/" style={styles.navItem}>
+            <FaPython style={styles.pythonLogo} />
+            {/* Python logo on the left */}
+          </Link>
+        </div>
+
+        <ul style={styles.navList}>
+          <li>
+            <Link to="/" style={styles.navItem}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/chat" style={styles.navItem}>
+              Chat
+            </Link>
+          </li>
+          <li>
+            <Link to="/settings" style={styles.navItem}>
+              Settings
+            </Link>
+          </li>
+        </ul>
+
+        <div style={styles.rightSection}>
+          <button onClick={this.toggleLogin} style={styles.loginButton}>
+            {this.state.isLoggedIn ? "Logout" : "Login"}
+          </button>
+        </div>
+      </nav>
+    );
+  }
 }
 
 const styles = {
-    navbar: {
-        position: "fixed", // Fix the navbar at the top
-        top: 0,            // Make sure it stays at the top of the page
-        left: 0,           // Align to the left side
-        width: "100%",     // Full width of the screen
-        backgroundColor: "#FFB6C1", // Soft pink for a playful vibe
-        padding: "20px",
-        height: "20px",    // Set navbar height
-        color: "#fff",     // White text
-        zIndex: 1000,      // Ensure the navbar stays on top of other content
-        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", // Fun shadow for depth
-        borderRadius: "0 0 20px 20px", // Rounded bottom corners
-        fontFamily: "'Comic Sans MS', cursive, sans-serif", // Fun, child-friendly font
-        display: "flex",   // Use flexbox to align items inside navbar
-        alignItems: "center",  // Vertically center the items in the navbar
-        justifyContent: "center", // Horizontally center the items
-    },
-    navList: {
-        listStyleType: "none",
-        margin: 0,
-        padding: 0,
-        display: "flex",
-        justifyContent: "center",  // Center the items horizontally
-        alignItems: "center",      // Align items vertically
-        gap: "25px",               // Space between the items
-    },
-    navItem: {
-        color: "#black",            // White text
-        textDecoration: "none",   // Remove underline
-        fontSize: "18px",         // Slightly bigger text for better visibility
-        padding: "12px 30px",     // Large padding for bigger clickable areas
-        borderRadius: "25px",     // Rounded corners for buttons
-        backgroundColor: "#FFD700", // Bright yellow button background
-        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)", // Fun shadow
-        transition: "transform 0.2s, background-color 0.3s ease", // Smooth transition for hover effects
-        display: "flex",
-        alignItems: "center",     // Center align the text and icon
-        fontWeight: "bold",        // Bold for a fun, stronger text
-    },
-    icon: {
-        marginRight: "10px",        // Space between the icon and the text
-        fontSize: "22px",           // Make the icons a little bigger
-    },
-    navItemHover: {
-        transform: "scale(1.1)",   // Zoom effect on hover
-        backgroundColor: "#FF6347", // Tomato red when hovered for extra excitement
-    }
+  navbar: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    backgroundColor: "#FFB6C1", 
+    padding: "20px",
+    height: "10px", 
+    color: "#fff",
+    zIndex: 1000,
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", 
+    borderRadius: "0 0 20px 20px", 
+    fontFamily: "'Comic Sans MS', cursive, sans-serif", 
+    display: "flex",
+    justifyContent: "space-between", 
+    alignItems: "center",
+  },
+  leftSection: {
+    display: "flex",
+    alignItems: "center",
+  },
+  rightSection: {
+    display: "flex",
+    alignItems: "center",
+  },
+  pythonLogo: {
+    fontSize: "30px",
+    color: "#306998", // Python logo color
+    marginRight: "10px", 
+  },
+  navList: {
+    listStyleType: "none",
+    margin: 0,
+    padding: 0,
+    display: "flex",
+    justifyContent: "center",  
+    gap: "25px", 
+  },
+  navItem: {
+    color: "#black", 
+    textDecoration: "none",
+    fontSize: "18px", 
+    padding: "12px 30px", 
+    borderRadius: "25px", 
+    backgroundColor: "#FFD700", 
+    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)", 
+    transition: "transform 0.2s, background-color 0.3s ease", 
+    display: "flex",
+    alignItems: "center",     
+    fontWeight: "bold",        
+  },
+  loginButton: {
+    backgroundColor: "#4CAF50",
+    color: "white",
+    padding: "12px 25px",
+    fontSize: "18px",
+    border: "none",
+    borderRadius: "15px",
+    cursor: "pointer",
+    boxShadow: "0 5px 10px rgba(0, 0, 0, 0.2)",
+    fontWeight: "bold",
+  },
 };
 
 export default Navbar;
