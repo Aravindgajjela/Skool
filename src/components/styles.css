@@ -1,0 +1,121 @@
+/* Main container for the entire voice assistant */
+.voice-assistant-container {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  min-height: 100vh;
+                  background: linear-gradient(45deg, #6a11cb, #2575fc);
+                  padding: 20px;
+                }
+                
+                .voice-assistant-box {
+                  background: rgba(255, 255, 255, 0.8);
+                  border-radius: 20px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  padding: 30px;
+                  width: 100%;
+                  max-width: 600px;
+                  text-align: center;
+                }
+                
+                .heading {
+                  font-size: 36px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 20px;
+                  font-family: 'Arial', sans-serif;
+                }
+                
+                .button-group {
+                  display: flex;
+                  gap: 10px;
+                  justify-content: center;
+                  margin-bottom: 20px;
+                }
+                
+                .btn {
+                  padding: 10px 20px;
+                  font-size: 16px;
+                  border-radius: 30px;
+                  transition: all 0.3s ease;
+                  cursor: pointer;
+                  border: none;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                
+                .start-btn {
+                  background-color: #32cd32;
+                  color: white;
+                }
+                
+                .stop-btn {
+                  background-color: #f44336;
+                  color: white;
+                }
+                
+                .speaking-btn {
+                  background-color: #ffa500;
+                  color: white;
+                }
+                
+                .ask-btn {
+                  background-color: #007bff;
+                  color: white;
+                  margin-top: 20px;
+                  width: 100%;
+                }
+                
+                .btn:hover {
+                  transform: scale(1.05);
+                }
+                
+                .question-input {
+                  width: 100%;
+                  padding: 12px;
+                  font-size: 16px;
+                  border-radius: 10px;
+                  border: 2px solid #007bff;
+                  margin-top: 10px;
+                }
+                
+                .question-input:focus {
+                  outline: none;
+                  border-color: #ff6347;
+                }
+                
+                .response-box, .code-box {
+                  margin-top: 20px;
+                  padding: 20px;
+                  background: rgba(255, 255, 255, 0.9);
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+                
+                .response-heading {
+                  font-size: 18px;
+                  font-weight: bold;
+                  color: #333;
+                }
+                
+                .response-text {
+                  font-size: 16px;
+                  color: #555;
+                }
+                
+                .code-box {
+                  background: #f0f8ff;
+                  font-family: 'Courier New', monospace;
+                  font-size: 14px;
+                  color: #333;
+                  white-space: pre-wrap;
+                }
+                
+                .code-text {
+                  word-wrap: break-word;
+                  overflow-wrap: break-word;
+                  white-space: pre-line;
+                  margin-top: 10px;
+                }
+                

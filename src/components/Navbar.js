@@ -19,7 +19,7 @@ class Navbar extends Component {
 
         <ul style={styles.navList}>
           <li><Link to="/" style={styles.navItem}><FaHome style={styles.icon} /> Home</Link></li>
-          <li><Link to="/chat" style={styles.navItem}><FaComments style={styles.icon} /> Chat</Link></li>
+          <li><Link to="/chat" style={styles.navItem}><FaComments style={styles.icon} /> Customize AI Tutor</Link></li>
           <li><Link to="/settings" style={styles.navItem}><FaCog style={styles.icon} /> Settings</Link></li>
         </ul>
 

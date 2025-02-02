@@ -63,7 +63,8 @@
     border-radius: 15px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 200px; /* Decreased the card size */
+    width: 200px; /* Set width same for all cards */
+    height: 200px; /* Reduced height for all cards */
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -109,7 +110,8 @@
     background-color: #E1F5FE; /* Light blue background */
     border-radius: 15px;
     padding: 20px;
-    width: 220px; /* Slightly larger for visibility */
+    width: 200px; /* Same width as other cards */
+    height: 200px; /* Same reduced height as other cards */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -131,7 +133,8 @@
     background-color: #FFF3E0; /* Light yellow background */
     border-radius: 15px;
     padding: 20px;
-    width: 220px; /* Slightly larger for visibility */
+    width: 200px; /* Same width as other cards */
+    height: 200px; /* Same reduced height as other cards */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -144,6 +147,29 @@
 }
 
 .card-code-visualizer:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* New styling for Code Flowchart Visualizer card */
+.card-code-visualizer-flowchart {
+    background-color: #FFECB3; /* Light yellow background */
+    border-radius: 15px;
+    padding: 20px;
+    width: 200px; /* Same width as other cards */
+    height: 200px; /* Same reduced height as other cards */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-code-visualizer-flowchart h3 {
+    color: #FF8F00; /* Dark orange color for card title */
+}
+
+.card-code-visualizer-flowchart p {
+    color: #555; /* Darker text for the description */
+}
+
+.card-code-visualizer-flowchart:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }

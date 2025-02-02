@@ -11,7 +11,7 @@ class CodeVisualizer extends Component {
       executionSteps: [], // Steps for code execution
       output: "", // Code output
       isExecuting: false, // Flag to show if code is being executed
-      theme: "light", // Theme for dark/light mode
+      theme: "dark", // Default theme set to light
       errorMessage: "", // Store error message if any
     };
   }
@@ -64,7 +64,7 @@ class CodeVisualizer extends Component {
     }
   };
 
-  // Toggle between dark and light theme
+  // Toggle between light and dark theme
   toggleTheme = () => {
     this.setState((prevState) => ({
       theme: prevState.theme === "light" ? "dark" : "light",
@@ -136,21 +136,22 @@ const styles = {
     padding: "30px",
     maxWidth: "900px",
     margin: "0 auto",
-    backgroundColor: "#fff",
-    borderRadius: "8px",
+    backgroundColor: "#f1f8e9", // Light background
+    borderRadius: "10px",
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    fontFamily: "'Comic Sans MS', cursive",
     color: "#333",
   },
   lightHeading: {
     textAlign: "center",
-    color: "#3498db",
-    fontSize: "36px",
+    color: "#FF5733", // Bright coral red for a fun feel
+    fontSize: "32px",
     marginBottom: "20px",
+    fontWeight: "bold",
   },
   lightSubHeading: {
-    color: "#2980b9",
-    fontSize: "20px",
+    color: "#FFEB3B", // Bright yellow for emphasis
+    fontSize: "22px",
     marginBottom: "10px",
   },
   lightTextarea: {
@@ -160,7 +161,7 @@ const styles = {
     fontSize: "16px",
     border: "1px solid #ddd",
     borderRadius: "8px",
-    fontFamily: "Courier New, monospace",
+    fontFamily: "'Courier New', monospace",
     resize: "none",
     backgroundColor: "#fafafa",
   },
@@ -182,21 +183,22 @@ const styles = {
     padding: "30px",
     maxWidth: "900px",
     margin: "0 auto",
-    backgroundColor: "#2c3e50",
-    borderRadius: "8px",
+    backgroundColor: "#263238", // Dark background
+    borderRadius: "10px",
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    fontFamily: "'Comic Sans MS', cursive",
     color: "#ecf0f1",
   },
   darkHeading: {
     textAlign: "center",
-    color: "#1abc9c",
-    fontSize: "36px",
+    color: "#FF5733", // Coral red for dark mode too
+    fontSize: "32px",
     marginBottom: "20px",
+    fontWeight: "bold",
   },
   darkSubHeading: {
-    color: "#16a085",
-    fontSize: "20px",
+    color: "#FFEB3B", // Bright yellow for dark mode
+    fontSize: "22px",
     marginBottom: "10px",
   },
   darkTextarea: {
@@ -208,7 +210,7 @@ const styles = {
     borderRadius: "8px",
     fontFamily: "Courier New, monospace",
     resize: "none",
-    backgroundColor: "#34495e",
+    backgroundColor: "#37474f",
     color: "#ecf0f1",
   },
   darkText: {
@@ -216,7 +218,7 @@ const styles = {
   },
   darkOutputBox: {
     padding: "15px",
-    backgroundColor: "#34495e",
+    backgroundColor: "#37474f",
     borderRadius: "8px",
     border: "1px solid #7f8c8d",
     fontFamily: "'Courier New', monospace",
@@ -229,7 +231,7 @@ const styles = {
   themeToggle: {
     background: "none",
     color: "#fff",
-    border: "1px solid #3498db",
+    border: "1px solid #FF5733", // Matching color theme
     padding: "10px 15px",
     borderRadius: "25px",
     cursor: "pointer",
@@ -241,7 +243,7 @@ const styles = {
     width: "150px",
     margin: "20px auto",
     padding: "15px",
-    backgroundColor: "#3498db",
+    backgroundColor: "#FF5733", // Matching color for button
     color: "#fff",
     fontSize: "16px",
     border: "none",
@@ -252,14 +254,14 @@ const styles = {
 
   // Execution Steps
   progressContainer: {
-    background: "rgba(52, 152, 219, 0.1)",
+    background: "rgba(255, 87, 51, 0.1)", // Slight coral background for steps
     borderRadius: "5px",
     padding: "10px",
     maxWidth: "500px",
     margin: "0 auto",
   },
   stepItem: {
-    background: "#3498db",
+    background: "#FF5733", // Fun coral background for each step
     color: "#fff",
     margin: "5px 0",
     padding: "8px",
@@ -269,7 +271,7 @@ const styles = {
 
   // Error Handling
   errorContainer: {
-    backgroundColor: "#e74c3c",
+    backgroundColor: "#FFEB3B", // Yellow error box to stand out
     color: "#fff",
     padding: "10px",
     borderRadius: "5px",

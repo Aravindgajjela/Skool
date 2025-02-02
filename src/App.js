@@ -1,7 +1,6 @@
-// App.js
+// File: src/App.js
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, { Component } from "react";
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./components/Home";
@@ -12,24 +11,26 @@ import ParentDashboard from "./components/ParentDashboard";
 import Chat from "./components/Chat";
 import Settings from "./components/Settings";
 import Navbar from "./components/Navbar";
-import CodeEditor from "./components/CodeEditor"; // Import CodeEditor component
-import CodeVisualizer from "./components/CodeVisualizer"; // Import CodeVisualizer component
+import CodeEditor from "./components/CodeEditor";
+import CodeVisualizer from "./components/CodeVisualizer";
+import CodeVisualizerFlowchart from "./components/CodeVisualizerFlowchart";
+import LiveCodingAssistant from "./components/LiveCodingAssistant";
+import VoiceAssistant from "./components/VoiceAssistant"; // Import the new VoiceAssistant component
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      executionSteps: [], // To store the execution steps
-      output: "",         // To store the output result
+      executionSteps: [],
+      output: "",
     };
   }
 
   // This function will handle the code execution result from the backend
   handleCodeExecution = (data) => {
-    // Update the state with execution steps and output after receiving response
     this.setState({
-      executionSteps: data.steps, // Set the execution steps
-      output: data.result,        // Set the output result from server
+      executionSteps: data.steps,
+      output: data.result,
     });
   };
 
@@ -47,15 +48,33 @@ class App extends Component {
           <Route path="/chat" element={<Chat />} />
           <Route path="/settings" element={<Settings />} />
 
-          {/* New Routes for Code Editor and Code Visualizer */}
+          {/* Routes for Code Editor, Visualizer, and Flowchart Visualizer */}
           <Route
             path="/code-editor"
             element={<CodeEditor onCodeExecution={this.handleCodeExecution} />}
           />
           <Route
             path="/code-visualizer"
-            element={<CodeVisualizer executionSteps={this.state.executionSteps} output={this.state.output} />}
+            element={
+              <CodeVisualizer
+                executionSteps={this.state.executionSteps}
+                output={this.state.output}
+              />
+            }
           />
+          <Route
+            path="/code-visualizer-flowchart"
+            element={
+              <CodeVisualizerFlowchart
+                executionSteps={this.state.executionSteps}
+                output={this.state.output}
+              />
+            }
+          />
+          {/* Route for Live Coding Assistant */}
+          <Route path="/live-coding-assistant" element={<LiveCodingAssistant />} />
+          {/* New Route for Voice Assistant */}
+          <Route path="/voice-assistant" element={<VoiceAssistant />} />
         </Routes>
       </Router>
     );
